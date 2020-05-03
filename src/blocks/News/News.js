@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import './News.scss';
 import NewsItem from "../NewsItem";
-import {Col, Tabs, Tab} from "react-bootstrap";
+import {Row, Col, Tabs, Tab} from 'react-bootstrap';
 
 const News = () => {
     const [key, setKey] = useState(1);
@@ -31,12 +31,14 @@ const News = () => {
             >
                 {rubrics.map((rubric) => (
                     <Tab eventKey={rubric.id} title={rubric.title}>
-                        {posts.filter((post) => post.rubricId === rubric.id)
-                            .map((post) => (
-                            <Col>
-                                <NewsItem key={post.id} data={post}/>
-                            </Col>
-                        ))}
+                        <Row>
+                            {posts.filter((post) => post.rubricId === rubric.id)
+                                .map((post) => (
+                                <Col md="2">
+                                    <NewsItem key={post.id} data={post}/>
+                                </Col>
+                            ))}
+                        </Row>
                     </Tab>
                 ))}
             </Tabs>

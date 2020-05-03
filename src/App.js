@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-d
 import 'holderjs';
 import Header from './blocks/Header';
 import AdminPage from './pages/AdminPage';
-import Patient from './pages/Patient';
+import PatientPage from './pages/PatientPage';
 import Patients from './pages/Patients';
 import HomePage from './pages/HomePage';
 import NewsPage from './pages/NewsPage';
@@ -12,23 +12,24 @@ import Notfound from './pages/Notfound';
 import MobileMenu from "./blocks/MobileMenu";
 
 const App = () => {
-  return (
-      <>
-          <Router>
-              <Header/>
-              <Switch>
-                  <Route path="/admin/" component={AdminPage}/>
-                  <Route path="/patients/:id" component={Patient}/>
-                  <Route path="/patients/" component={Patients}/>
-                  <Route path="/news/" component={NewsPage}/>
-                  <Route path="/edu/" component={EducationPage}/>
-                  <Route path="/" component={HomePage}/>
-                  <Route component={Notfound}/>
-              </Switch>
-              <MobileMenu/>
-          </Router>
-      </>
-  );
+
+    return (
+        <>
+            <Router>
+                <Header/>
+                <Switch>
+                    <Route path="/admin/" component={AdminPage}/>
+                    <Route path="/patients/:id" component={PatientPage}/>
+                    <Route path="/patients/" component={Patients}/>
+                    <Route path="/news/" component={NewsPage}/>
+                    <Route path="/edu/" component={EducationPage}/>
+                    <Route path="/" component={HomePage}/>
+                    <Route component={Notfound}/>
+                </Switch>
+                <MobileMenu/>
+            </Router>
+        </>
+    );
 }
 
 export default App;

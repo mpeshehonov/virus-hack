@@ -6,7 +6,7 @@ import {Container} from "react-bootstrap";
 const NewsPage = () => {
 
     return (
-        <Container>
+        <Container fluid>
             <News />
         </Container>
     );

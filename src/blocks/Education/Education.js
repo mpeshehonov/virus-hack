@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import './Education.scss';
-import {Col, Tabs, Tab} from 'react-bootstrap';
+import {Row, Col, Tabs, Tab} from 'react-bootstrap';
 import EducationItem from "../EducationItem";
 
 const Education = () => {
@@ -33,12 +33,14 @@ const Education = () => {
             >
                 {cats.map((cat) => (
                     <Tab eventKey={cat.id} title={cat.title}>
-                        {edu.filter((eduItem) => eduItem.eduCat === cat.id)
-                            .map((post) => (
-                                <Col>
-                                    <EducationItem key={post.id} data={post}/>
-                                </Col>
-                            ))}
+                        <Row>
+                            {edu.filter((eduItem) => eduItem.eduCat === cat.id)
+                                .map((post) => (
+                                    <Col md="2">
+                                        <EducationItem key={post.id} data={post}/>
+                                    </Col>
+                                ))}
+                        </Row>
                     </Tab>
                 ))}
             </Tabs>
