@@ -9,6 +9,8 @@ import HomePage from './pages/HomePage';
 import NewsPage from './pages/NewsPage';
 import EducationPage from './pages/EducationPage';
 import PatientCardPage from './pages/PatientCardPage';
+import PatientRecordsPage from './pages/PatientRecordsPage';
+import PatientRecordPage from './pages/PatientRecordPage';
 import Notfound from './pages/Notfound';
 
 const App = () => {
@@ -24,6 +26,8 @@ const App = () => {
                         <Route path="/patients/" component={Patients}/>
                         <Route path="/news/" component={NewsPage}/>
                         <Route path="/edu/" component={EducationPage}/>
+                        <Route path="/card/records/" component={PatientRecordsPage}/>
+                        <Route path="/card/record/" component={PatientRecordPage}/>
                         <Route path="/card/" component={PatientCardPage}/>
                         <Route path="/" component={HomePage}/>
                         <Route component={Notfound}/>
