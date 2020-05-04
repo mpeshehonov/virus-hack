@@ -2,9 +2,46 @@ body {
   font-family: Montserrat, sans-serif;
 }
 
+main section {
+  margin: 30px auto;
+}
+
+.hello {
+  background: linear-gradient(270deg, rgba(77, 164, 242, 0.3) 0%, #4DA4F2 100%), #6AC4FF;
+  border-radius: 0;
+  color: white;
+  padding: 24px;
+
+  h1 {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 37px;
+    color: #fff;
+    padding-left: 24px;
+  }
+
+  p {
+    font-size: 16px;
+    line-height: 20px;
+    opacity: 0.8;
+    padding-left: 24px;
+  }
+}
+
+.scrollbar {
+  max-width: 350px;
+  overflow-x: scroll;
+}
+
 .site-layout-background {
   background: #fff;
 }
 .layout-content {
   padding: 24px;
+}
+
+.layout-br-top {
+  border-radius: 30px 30px 0 0;
+  margin-top: -24px;
+  margin-bottom: 30px;
 }
