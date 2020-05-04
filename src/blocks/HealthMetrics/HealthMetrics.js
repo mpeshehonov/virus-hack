@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import './HealthMetrics.scss';
-import ScrollArea from 'react-scrollbar';
+import {Space} from "antd";
 
 const HealthMetrics = () => {
 
@@ -8,12 +8,7 @@ const HealthMetrics = () => {
         <section>
             <h2>Сегодня</h2>
             <p>Добавьте данные о своем здоровье для получения персональных рекомендаций</p>
-            <ScrollArea
-                speed={0.8}
-                className="health-metrics-area"
-                contentClassName="health-metrics"
-                horizontal={true}
-            >
+            <Space className="scrollbar">
                 <svg width="461" height="101" viewBox="0 0 461 101" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g filter="url(#filter0_d)">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M40 68C57.6731 68 72 53.6731 72 36C72 18.3269 57.6731 4 40 4C22.3269 4 8 18.3269 8 36C8 53.6731 22.3269 68 40 68Z" fill="url(#paint0_linear)"/>
@@ -100,7 +95,7 @@ const HealthMetrics = () => {
                         </linearGradient>
                     </defs>
                 </svg>
-            </ScrollArea>
+            </Space>
         </section>
     );
 };

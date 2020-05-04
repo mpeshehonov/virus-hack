@@ -26,7 +26,7 @@ const News = () => {
             <Tabs defaultActiveKey="1">
                 {rubrics.map((rubric) => (
                     <Tabs.TabPane key={rubric.id} tab={rubric.title}>
-                        <Space>
+                        <Space className="scrollbar">
                             {posts.filter((post) => post.rubricId === rubric.id)
                                 .map((post) => (
                                     <NewsItem key={post.id} data={post}/>

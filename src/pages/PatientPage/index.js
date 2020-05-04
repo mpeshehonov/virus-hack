@@ -3,6 +3,7 @@ import { useRouteMatch } from 'react-router-dom';
 import Sidebar from "../../blocks/Sidebar";
 import Patient from "../../blocks/Patient";
 import {Layout} from "antd";
+import Header from "../../blocks/Header";
 
 const PatientPage = () => {
     const rm = useRouteMatch();
@@ -16,6 +17,7 @@ const PatientPage = () => {
 
     return (
         <>
+            <Header/>
             <Layout>
                 <Sidebar />
                 <Layout.Content className="layout-content">

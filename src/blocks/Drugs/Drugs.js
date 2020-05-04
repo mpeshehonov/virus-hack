@@ -1,19 +1,13 @@
 import React, {useEffect, useState} from 'react';
 import './Drugs.scss';
-import { Row, Col } from 'antd';
-import ScrollArea from "react-scrollbar";
+import {Space} from "antd";
 
 const Drugs = () => {
 
     return (
         <section>
             <h2>Прием лекарств</h2>
-            <ScrollArea
-                speed={0.8}
-                className="drugs-area"
-                contentClassName="drugs"
-                horizontal={true}
-            >
+            <Space className="scrollbar">
                 <svg width="486" height="105" viewBox="0 0 486 105" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g filter="url(#filter0_d)">
                         <circle cx="50.9595" cy="44.5002" r="30" transform="rotate(-90 50.9595 44.5002)" fill="#0069D8"/>
@@ -150,7 +144,7 @@ const Drugs = () => {
                         </clipPath>
                     </defs>
                 </svg>
-            </ScrollArea>
+            </Space>
         </section>
     );
 };

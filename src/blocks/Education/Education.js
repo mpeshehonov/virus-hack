@@ -28,7 +28,7 @@ const Education = () => {
             <Tabs defaultActiveKey="1">
                 {cats.map((cat) => (
                     <Tabs.TabPane key={cat.id} tab={cat.title}>
-                        <Space>
+                        <Space className="scrollbar">
                             {edu.filter((eduItem) => eduItem.eduCat === cat.id)
                                 .map((post) => (
                                     <EducationItem key={post.id} data={post}/>

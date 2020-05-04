@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import { Layout, Table } from 'antd';
 import Sidebar from "../../blocks/Sidebar";
 import {Link} from 'react-router-dom';
+import Header from "../../blocks/Header";
 
 
 const Patients = () => {
@@ -33,18 +34,21 @@ const Patients = () => {
     }, []);
 
     return (
-        <Layout>
-            <Sidebar />
-            <Layout.Content className="layout-content">
-                <section>
-                    <h1>Пациенты</h1>
-                    <Table
-                        columns={columns}
-                        dataSource={patients}
-                    />
-                </section>
-            </Layout.Content>
-        </Layout>
+        <>
+            <Header/>
+            <Layout>
+                <Sidebar />
+                <Layout.Content className="layout-content">
+                    <section>
+                        <h1>Пациенты</h1>
+                        <Table
+                            columns={columns}
+                            dataSource={patients}
+                        />
+                    </section>
+                </Layout.Content>
+            </Layout>
+        </>
     );
 };
 

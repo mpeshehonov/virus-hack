@@ -8,6 +8,7 @@ import News from '../../blocks/News';
 import Education from '../../blocks/Education';
 import MobileMenu from "../../blocks/MobileMenu";
 import PatientActions from "../../blocks/PatientActions";
+import Header from "../../blocks/Header";
 
 const Homepage = () => {
     return (
