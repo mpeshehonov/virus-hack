@@ -1,0 +1,20 @@
+.header {
+  .logo {
+    width: 120px;
+    height: 31px;
+    margin: 16px 28px 16px 0;
+    float: left;
+  }
+  .ant-menu {
+    float: right;
+    .ant-menu-item {
+      border-bottom: none;
+      border-right: 2px solid #F0F6FB;
+    }
+    .ant-menu-item.ant-menu-item-only-child:last-child {
+      border-right: none;
+    }
+  }
+}
+
+
