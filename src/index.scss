@@ -48,6 +48,13 @@ h3 {
 
 .mobile-page {
   width: 375px;
+  img {
+    margin-left: -20px;
+  }
+
+  .scrollbar img {
+    margin-left: 0;
+  }
 }
 
 .hello {
