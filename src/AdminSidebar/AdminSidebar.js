@@ -5,6 +5,11 @@ import { Layout, Menu, Input } from 'antd';
 const AdminSidebar = () => {
     return (
         <Layout.Sider width={250} className="site-layout-background">
+            <Input.Search
+                className="patients-search"
+                placeholder="Поиск по админке..."
+                style={{ width: 250 }}
+            />
             <Menu
                 mode="inline"
                 defaultSelectedKeys={['1']}
@@ -15,11 +20,6 @@ const AdminSidebar = () => {
                 <Menu.Item key="3">Бэкапы</Menu.Item>
                 <Menu.Item key="4">Настройки</Menu.Item>
             </Menu>
-            <Input.Search
-                className="patients-search"
-                placeholder="Поиск по админке..."
-                style={{ width: 250 }}
-            />
         </Layout.Sider>
     );
 };

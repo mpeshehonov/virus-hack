@@ -9,11 +9,6 @@ const Patients = () => {
     const [patients, setPatients] = useState([]);
     const columns = [
         {
-            title: '#',
-            dataIndex: 'id',
-            render: text => <Link to={`/patients/${text}`}>Перейти</Link>
-        },
-        {
             title: 'Имя',
             dataIndex: 'firstName'
         },
@@ -24,7 +19,31 @@ const Patients = () => {
         {
             title: 'Email',
             dataIndex: 'mail'
-        }
+        },
+        {
+            title: 'Возраст',
+            dataIndex: 'age'
+        },
+        {
+            title: 'Полис',
+            dataIndex: 'polis'
+        },
+        {
+            title: 'Последний визит',
+            dataIndex: 'lastVisit'
+        },
+        {
+            title: 'Действия',
+            dataIndex: 'id',
+            render: (text) => (
+                <>
+                    <Link to={`/patients/${text}`}>Перейти</Link>
+                    &nbsp;
+                    &nbsp;
+                    <Link to={`/record/${text}`}>Записать</Link>
+                </>
+            )
+        },
     ];
 
     useEffect(() => {

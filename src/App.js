@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-d
 import { Layout } from 'antd';
 import AdminPage from './pages/AdminPage';
 import PatientPage from './pages/PatientPage';
+import RecordPage from './pages/RecordPage';
 import Patients from './pages/Patients';
 import HomePage from './pages/HomePage';
 import NewsPage from './pages/NewsPage';
@@ -18,6 +19,7 @@ const App = () => {
                 <Layout>
                     <Switch>
                         <Route path="/admin/" component={AdminPage}/>
+                        <Route path="/record/:id" component={RecordPage}/>
                         <Route path="/patients/:id" component={PatientPage}/>
                         <Route path="/patients/" component={Patients}/>
                         <Route path="/news/" component={NewsPage}/>
