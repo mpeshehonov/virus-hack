@@ -1,5 +1,4 @@
 import React from 'react';
-import './AdminSidebar.scss';
 import { Layout, Menu, Input } from 'antd';
 
 const AdminSidebar = () => {
@@ -13,7 +12,7 @@ const AdminSidebar = () => {
             <Menu
                 mode="inline"
                 defaultSelectedKeys={['1']}
-                style={{ height: '100%', borderRight: 0 }}
+                style={{ borderRight: 0 }}
             >
                 <Menu.Item key="1">База данных</Menu.Item>
                 <Menu.Item key="2">Архивы</Menu.Item>

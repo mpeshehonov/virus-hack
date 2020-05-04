@@ -14,7 +14,7 @@ const TestsSidebar = () => {
 
             <Menu
                 mode="inline"
-                style={{ height: '100%', borderRight: 0 }}
+                style={{ borderRight: 0 }}
             >
                 <Menu.Item key="1">Название теста 1</Menu.Item>
                 <Menu.Item key="2">Название теста 2</Menu.Item>

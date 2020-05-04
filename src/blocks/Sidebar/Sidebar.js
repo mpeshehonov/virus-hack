@@ -152,7 +152,7 @@ const Sidebar = () => {
 
             <Menu
                 mode="inline"
-                style={{ height: '100%', borderRight: 0 }}
+                style={{ borderRight: 0 }}
             >
                 <Menu.Item key="1">Другой пациент</Menu.Item>
                 <Menu.Item key="2">Другой пациент</Menu.Item>

@@ -24,7 +24,7 @@ const PatientPage = () => {
                     { patient &&
                         <>
                             <Row>
-                                <Col span={14}>
+                                <Col span={16}>
                                     <Patient data={patient}/>
                                     <Row>
                                         <Col>
