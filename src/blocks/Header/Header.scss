@@ -1,8 +1,20 @@
-.header .logo {
-  width: 120px;
-  height: 31px;
-  background: rgba(77, 164, 242, 0.3);
-  margin: 16px 28px 16px 0;
-  float: left;
+.header {
+  .logo {
+    width: 120px;
+    height: 31px;
+    margin: 16px 28px 16px 0;
+    float: left;
+  }
+  .ant-menu {
+    float: right;
+    .ant-menu-item {
+      border-bottom: none;
+      border-right: 2px solid #F0F6FB;
+    }
+    .ant-menu-item.ant-menu-item-only-child:last-child {
+      border-right: none;
+    }
+  }
 }
+
 
