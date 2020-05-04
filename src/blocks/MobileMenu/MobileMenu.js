@@ -1,29 +1,29 @@
 import React from 'react';
-import {Nav, Navbar} from 'react-bootstrap';
 import {Link} from "react-router-dom";
 import './MobileMenu.scss';
+import { Menu, Affix } from 'antd';
 
 const MobileMenu = () => {
     return (
-        <Navbar className="d-md-none" fixed="bottom" bg="light" variant="light">
-            <Nav className="mr-auto">
-                <Nav.Link>
+        <Affix style={{ position: 'fixed', bottom: 0 }}>
+            <Menu mode="horizontal" defaultSelectedKeys={['1']}>
+                <Menu.Item key="1">
                     <Link to="/">
                         Главная
                     </Link>
-                </Nav.Link>
-                <Nav.Link>
-                    <Link to="#">
-                        Обучение
+                </Menu.Item>
+                <Menu.Item key="2">
+                    <Link to="/patients">
+                        Пациенты
                     </Link>
-                </Nav.Link>
-                <Nav.Link>
-                    <Link to="#">
-                        Профиль
+                </Menu.Item>
+                <Menu.Item key="3">
+                    <Link to="/news">
+                        Новости
                     </Link>
-                </Nav.Link>
-            </Nav>
-        </Navbar>
+                </Menu.Item>
+            </Menu>
+        </Affix>
     );
 };
 

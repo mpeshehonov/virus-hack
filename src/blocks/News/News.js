@@ -1,10 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import './News.scss';
 import NewsItem from "../NewsItem";
-import {Row, Col, Tabs, Tab} from 'react-bootstrap';
+import {Space, Tabs} from 'antd';
 
 const News = () => {
-    const [key, setKey] = useState(1);
     const [rubrics, setRubrics] = useState([]);
     const [posts, setPosts] = useState([]);
 
@@ -24,22 +23,16 @@ const News = () => {
         <section>
             <h2>Новости</h2>
 
-            <Tabs
-                id="controlled-tab-example"
-                activeKey={key}
-                onSelect={(k) => setKey(k)}
-            >
+            <Tabs defaultActiveKey="1">
                 {rubrics.map((rubric) => (
-                    <Tab eventKey={rubric.id} title={rubric.title}>
-                        <Row>
+                    <Tabs.TabPane key={rubric.id} tab={rubric.title}>
+                        <Space>
                             {posts.filter((post) => post.rubricId === rubric.id)
                                 .map((post) => (
-                                <Col md="2">
                                     <NewsItem key={post.id} data={post}/>
-                                </Col>
                             ))}
-                        </Row>
-                    </Tab>
+                        </Space>
+                    </Tabs.TabPane>
                 ))}
             </Tabs>
         </section>

@@ -1,14 +1,15 @@
 import React from 'react';
 import './EducationItem.scss';
-import {Card} from 'react-bootstrap';
+import {Card} from 'antd';
 
 const EducationItem = (props) => {
     return (
-        <Card className="mt-2" style={{ width: '18rem' }}>
-            <Card.Img variant="top" src={props.data.picture} />
-            <Card.Body>
-                <Card.Title>{props.data.title}</Card.Title>
-            </Card.Body>
+        <Card
+            bordered={false}
+            style={{ width: 240 }}
+            cover={<img alt="example" src={props.data.picture} />}
+        >
+            <Card.Meta title={props.data.title} />
         </Card>
     );
 };

@@ -1,10 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import './Education.scss';
-import {Row, Col, Tabs, Tab} from 'react-bootstrap';
+import { Space, Tabs } from 'antd';
 import EducationItem from "../EducationItem";
 
 const Education = () => {
-    const [key, setKey] = useState(1);
     const [cats, setCats] = useState([]);
     const [edu, setEdu] = useState([]);
 
@@ -26,22 +25,16 @@ const Education = () => {
             <h2>Образование</h2>
             <p>Проверь свои знания о здоровье</p>
 
-            <Tabs
-                id="controlled-tab-example"
-                activeKey={key}
-                onSelect={(k) => setKey(k)}
-            >
+            <Tabs defaultActiveKey="1">
                 {cats.map((cat) => (
-                    <Tab eventKey={cat.id} title={cat.title}>
-                        <Row>
+                    <Tabs.TabPane key={cat.id} tab={cat.title}>
+                        <Space>
                             {edu.filter((eduItem) => eduItem.eduCat === cat.id)
                                 .map((post) => (
-                                    <Col md="2">
-                                        <EducationItem key={post.id} data={post}/>
-                                    </Col>
+                                    <EducationItem key={post.id} data={post}/>
                                 ))}
-                        </Row>
-                    </Tab>
+                        </Space>
+                    </Tabs.TabPane>
                 ))}
             </Tabs>
         </section>

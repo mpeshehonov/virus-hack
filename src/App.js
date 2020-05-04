@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import 'holderjs';
+import { Layout } from 'antd';
 import Header from './blocks/Header';
 import AdminPage from './pages/AdminPage';
 import PatientPage from './pages/PatientPage';
@@ -16,17 +17,18 @@ const App = () => {
     return (
         <>
             <Router>
-                <Header/>
-                <Switch>
-                    <Route path="/admin/" component={AdminPage}/>
-                    <Route path="/patients/:id" component={PatientPage}/>
-                    <Route path="/patients/" component={Patients}/>
-                    <Route path="/news/" component={NewsPage}/>
-                    <Route path="/edu/" component={EducationPage}/>
-                    <Route path="/" component={HomePage}/>
-                    <Route component={Notfound}/>
-                </Switch>
-                <MobileMenu/>
+                <Layout>
+                    <Header/>
+                    <Switch>
+                        <Route path="/admin/" component={AdminPage}/>
+                        <Route path="/patients/:id" component={PatientPage}/>
+                        <Route path="/patients/" component={Patients}/>
+                        <Route path="/news/" component={NewsPage}/>
+                        <Route path="/edu/" component={EducationPage}/>
+                        <Route path="/" component={HomePage}/>
+                        <Route component={Notfound}/>
+                    </Switch>
+                </Layout>
             </Router>
         </>
     );

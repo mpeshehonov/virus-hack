@@ -1,47 +1,31 @@
 import React from 'react';
 import './Header.scss';
-import {Navbar, Nav} from 'react-bootstrap';
+import { Layout, Menu } from 'antd';
 import {Link} from "react-router-dom";
 
 const Header = () => {
+
     return (
-        <header>
-            <Navbar className="d-none d-md-flex" bg="light" variant="light">
-                <Navbar.Brand href="#home">
-                    <img
-                        alt="myhealth"
-                        src="holder.js/30px30"
-                        width="30"
-                        height="30"
-                        className="d-inline-block align-top"
-                    />
-                    myhealth
-                </Navbar.Brand>
-                <Nav className="mr-auto">
-                    <Nav.Link>
-                        <Link to="/">
-                            Главная
-                        </Link>
-                    </Nav.Link>
-                    <Nav.Link>
-                        <Link to="/patients">
-                            Пациенты
-                        </Link>
-                    </Nav.Link>
-                    <Nav.Link>
-                        <Link to="/news">
-                            Новости
-                        </Link>
-                    </Nav.Link>
-                </Nav>
-                <Navbar.Toggle />
-                <Navbar.Collapse className="justify-content-end">
-                    <Navbar.Text>
-                        <a href="#login">Константин петров</a>
-                    </Navbar.Text>
-                </Navbar.Collapse>
-            </Navbar>
-        </header>
+        <Layout.Header className="header site-layout-background">
+            <div className="logo"/>
+            <Menu mode="horizontal" defaultSelectedKeys={['1']}>
+                <Menu.Item key="1">
+                    <Link to="/">
+                        Главная
+                    </Link>
+                </Menu.Item>
+                <Menu.Item key="2">
+                    <Link to="/patients">
+                        Пациенты
+                    </Link>
+                </Menu.Item>
+                <Menu.Item key="3">
+                    <Link to="/news">
+                        Новости
+                    </Link>
+                </Menu.Item>
+            </Menu>
+        </Layout.Header>
     );
 };
 

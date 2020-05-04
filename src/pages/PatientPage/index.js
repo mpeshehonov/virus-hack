@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import {useRouteMatch} from 'react-router-dom';
+import { useRouteMatch } from 'react-router-dom';
 import Sidebar from "../../blocks/Sidebar";
 import Patient from "../../blocks/Patient";
-import {Row, Col} from "react-bootstrap";
+import {Layout} from "antd";
 
 const PatientPage = () => {
     const rm = useRouteMatch();
@@ -15,16 +15,16 @@ const PatientPage = () => {
     }, []);
 
     return (
-        <section>
-            <Row>
+        <>
+            <Layout>
                 <Sidebar />
-                <Col md="9">
+                <Layout.Content className="layout-content">
                     { patient &&
                         <Patient data={patient}/>
                     }
-                </Col>
-            </Row>
-        </section>
+                </Layout.Content>
+            </Layout>
+        </>
     );
 };
 

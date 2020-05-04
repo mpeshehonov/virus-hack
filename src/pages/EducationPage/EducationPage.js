@@ -1,14 +1,16 @@
 import React from 'react';
 import './EducationPage.scss';
-import News from "../../blocks/News";
-import {Container} from "react-bootstrap";
+import {Layout} from 'antd';
+import Education from "../../blocks/Education";
 
 const EducationPage = () => {
 
     return (
-        <Container>
-            <News />
-        </Container>
+        <Layout>
+            <Layout.Content>
+                <Education />
+            </Layout.Content>
+        </Layout>
     );
 };
 

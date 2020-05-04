@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import './Recommends.scss';
-import {Row, Col, Card, Button, Figure} from 'react-bootstrap';
+import { Space, Card } from 'antd';
 
 const Recommends = () => {
     const [recs, setRecs] = useState([]);
@@ -12,25 +12,20 @@ const Recommends = () => {
     }, []);
 
     return (
-        <section className="mt-5">
-            <Row>
-                <Col>
-                    <h2>Рекомендации</h2>
-                    <p>Персональные советы по улучшению Вашего здоровья</p>
-                </Col>
-            </Row>
-            <Row>
+        <section>
+            <h2>Рекомендации</h2>
+            <p>Персональные советы по улучшению Вашего здоровья</p>
+            <Space>
                 {recs.map((rec) => (
-                    <Col md="2">
-                        <Card style={{ width: '18rem' }}>
-                            <Card.Img variant="top" src={rec.picture} />
-                            <Card.Body>
-                                <Card.Title>{rec.title}</Card.Title>
-                            </Card.Body>
-                        </Card>
-                    </Col>
+                    <Card
+                        bordered={false}
+                        style={{ width: 240 }}
+                        cover={<img alt="example" src={rec.picture} />}
+                    >
+                        <Card.Meta title={rec.title} />
+                    </Card>
                 ))}
-            </Row>
+            </Space>
         </section>
     );
 };
